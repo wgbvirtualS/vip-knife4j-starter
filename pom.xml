@@ -8,7 +8,7 @@
     <version>1.0.0</version>
     <name>vip-knife4j-starter</name>
     <description>Knife4j API聚合组件</description>
-    <url>https://github.com/wgbvirtualS/swagger2.git</url>
+    <url>https://github.com/wgbvirtualS/vip-knife4j-starter.git</url>
 
     <properties>
         <!--Spring Boot-->
@@ -54,7 +54,7 @@
 
     <!--源码地址-->
     <scm>
-        <url>https://github.com/wgbvirtualS/swagger2.git</url>
+        <url>https://github.com/wgbvirtualS/vip-knife4j-starter.git</url>
     </scm>
 
     <dependencies>
