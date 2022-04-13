@@ -7,10 +7,9 @@ import org.springframework.context.annotation.Import;
 import springfox.bean.validators.configuration.BeanValidatorPluginsConfiguration;
 
 /**
- * knife4j配置
+ * Knife4j configuration
  *
  * @author wgb
- * @date 2022/04/11
  */
 @Configuration
 @EnableKnife4j

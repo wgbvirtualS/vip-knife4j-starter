@@ -3,26 +3,25 @@ package com.vip.knife4j.swagger;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
- * Swagger配置文件属性
+ * Swagger profile properties
  *
  * @author wgb
- * @date 2022/02/16
  */
 @ConfigurationProperties(prefix = "knife4j")
 public class SwaggerProperties {
 
     /**
-     * 扫描包路径
+     * Scanning packet path
      */
     private String basePackage;
 
     /**
-     * 作者
+     * author
      */
     private Author author = new Author();
 
     /**
-     * API的相关信息
+     * Information about apis
      */
     private ApiInfo apiInfo = new ApiInfo();
 

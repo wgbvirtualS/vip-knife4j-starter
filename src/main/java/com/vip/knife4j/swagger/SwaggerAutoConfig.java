@@ -23,10 +23,9 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Swagger的自动配置类
+ * Automatic configuration class for Swagger
  *
  * @author wgb
- * @date 2022/2/16 9:26
  */
 @Configuration
 @EnableSwagger2
@@ -42,8 +41,8 @@ public class SwaggerAutoConfig implements WebMvcConfigurer {
     }
 
     /**
-     * 配置了Swagger的Docket的bean实例
-     * enable是否启动swagger，如果为False则Swagger不能在浏览器访问
+     * Docket bean instance with Swagger configured
+     * Enable Indicates whether to enable Swagger. If the value is False, Swagger cannot be accessed in the browser
      *
      * @return {@link Docket}
      */
@@ -54,17 +53,17 @@ public class SwaggerAutoConfig implements WebMvcConfigurer {
         set.add("https");
         set.add("http");
         Docket docket = new Docket(DocumentationType.SWAGGER_2).pathMapping("/")
-                // 定义是否开启swagger，false为关闭，可以通过变量控制
+                // Define whether to enable swagger，false is close, It can be controlled by variables
                 .enable(true)
-                // 将api的元信息设置为包含在json ResourceListing响应中。
+                // Set the API meta-information to be included in the JSON ResourceListing response.
                 .apiInfo(apiInfo())
-                // 支持的通讯协议集合
+                // Set of supported communication protocols
                 .protocols(set)
-                // 授权信息设置，必要的header token等认证信息
+                // Authorization information Set authentication information, such as header and token
                 .securitySchemes(securitySchemes())
-                // 授权信息全局应用
+                // Global application of authorization information
                 .securityContexts(securityContexts());
-        // 设置扫描路径及过滤路径（无侵入代码的体现）
+        // Set scan path and filter path (non-intrusive code embodiment)
         ApiSelectorBuilder builder = docket.select();
         if (null == basePackage || "".equals(basePackage.trim())) {
             return builder.paths(PathSelectors.any()).build();
@@ -74,7 +73,7 @@ public class SwaggerAutoConfig implements WebMvcConfigurer {
     }
 
     /**
-     * 配置Swagger 信息 = ApiInfo
+     * Configure Swagger information
      *
      * @return {@link ApiInfo}
      */
@@ -93,18 +92,18 @@ public class SwaggerAutoConfig implements WebMvcConfigurer {
     }
 
     /**
-     * 设置授权信息
+     * Setting Authorization Information
      *
      * @return {@link List}<{@link SecurityScheme}>
      */
     private List<? extends SecurityScheme> securitySchemes() {
-        // 添加OAuth2的令牌认证
+        // Added token authentication for Oauth2
         ApiKey apiKey = new ApiKey("Authorization", "Authorization", "Header");
         return Collections.singletonList(apiKey);
     }
 
     /**
-     * 授权信息全局应用
+     * Global application of authorization information
      *
      * @return {@link List}<{@link SecurityContext}>
      */
