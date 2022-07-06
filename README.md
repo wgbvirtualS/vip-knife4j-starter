@@ -1,4 +1,4 @@
-# OPEN-无代码侵入Knife4j
+# 无代码侵入Knife4j
 
 #### 介绍
 这是一款改进的Knife4j，只需要Install本地仓库后，导入jar包并在配置文件中做简单配置即可直接享用Knife4j的所有功能，省去了Knife4j及Swagger的相关配置
@@ -31,16 +31,16 @@ knife4j:
 
 **配置参数**
 
-1.basePackage(可选) 扫描的包路径,默认没有,扫描下面的所有的@Controller和@RequestMapping的映射
-2.apiInfo.title(可选)  接口的标题,具体就不多说了吧,可以自己试着玩,默认是`Swagger Restful API`
-3.apiInfo.description(可选) 接口的描述,默认是`This is a swagger api desc`
-4.apiInfo.version(可选) 接口的版本,默认是`1.0.0`
-5.apiInfo.termsOfService(可选) 服务条款的地址,默认没有
-6.apiInfo.license(可选) 证书名,默认没有
-7.apiInfo.licenseUrl(可选) 证书的url,默认没有
-8.author.name(可选)  作者,默认没有
-9.author.url(可选) 作者的url,默认没有
-10.author.email(可选)  作者的email,默认没有
+- basePackage(可选) 扫描的包路径,默认没有,扫描下面的所有的@Controller和@RequestMapping的映射
+- apiInfo.title(可选)  接口的标题,具体就不多说了吧,可以自己试着玩,默认是`Swagger Restful API`
+- apiInfo.description(可选) 接口的描述,默认是`This is a swagger api desc`
+- apiInfo.version(可选) 接口的版本,默认是`1.0.0`
+- apiInfo.termsOfService(可选) 服务条款的地址,默认没有
+- apiInfo.license(可选) 证书名,默认没有
+- apiInfo.licenseUrl(可选) 证书的url,默认没有
+- author.name(可选)  作者,默认没有
+- author.url(可选) 作者的url,默认没有
+- author.email(可选)  作者的email,默认没有
 
 ## 3.启动和使用
 
